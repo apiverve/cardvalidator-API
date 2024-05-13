@@ -1,0 +1,32 @@
+{
+  "name": "@apiverve/cardvalidator",
+  "version": "1.0.0",
+  "description": "Card Validator is a simple tool for validating if a card number is valid or not. It checks the card number format and the Luhn algorithm to see if the card number is valid.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apiverve/cardvalidator-API.git"
+  },
+  "keywords": [
+    "card validator"," card validator api"," card validator tool"," card validator software"," card validator service"," card validator library"," card validator sdk"," card validator code"," card validator script"," card validator program"," card validator application"," card validator app"," card validator utility"," card validator helper"," card validator helper tool"," card validator helper software"," card validator helper service"," card validator helper library"," card validator helper sdk"," card validator helper code"," card validator helper script"," card validator helper program"," card validator helper application"," card validator helper app"," card validator helper tool"," card validator helper utility"," card validator helper"
+  ],
+  "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apiverve/cardvalidator-API/issues"
+  },
+  "homepage": "https://github.com/apiverve/cardvalidator-API",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "chai": "^3.4.1",
+    "dotenv": "^2.0.0"
+  },
+  "dependencies": {
+    "node-fetch": "3.3.2",
+    "promise": "^7.1.1",
+    "request": "^2.69.0"
+  }
+}
