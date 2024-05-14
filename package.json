@@ -11,7 +11,7 @@
     "url": "git+https://github.com/apiverve/cardvalidator-API.git"
   },
   "keywords": [
-    "card validator"," card validator api"," card validator tool"," card validator software"," card validator service"," card validator library"," card validator sdk"," card validator code"," card validator script"," card validator program"," card validator application"," card validator app"," card validator utility"," card validator helper"," card validator helper tool"," card validator helper software"," card validator helper service"," card validator helper library"," card validator helper sdk"," card validator helper code"," card validator helper script"," card validator helper program"," card validator helper application"," card validator helper app"," card validator helper tool"," card validator helper utility"," card validator helper"
+    "card validator","card validator api","card validator tool","card validator software","card validator service"
   ],
   "author": "APIVerve <hello@apiverve.com> (http://apiverve.com/)",
   "license": "MIT",
@@ -27,6 +27,6 @@
   "dependencies": {
     "node-fetch": "3.3.2",
     "promise": "^7.1.1",
-    "request": "^2.69.0"
+    "axios": "^0.15.3"
   }
 }
