@@ -95,7 +95,8 @@ api.execute(query, function (error, data) {
     },
     "cardNumber": "4900264223817524",
     "isValid": true
-  }
+  },
+  "code": 200
 }
 ```
 
