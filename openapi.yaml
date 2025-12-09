@@ -1,0 +1,83 @@
+openapi: 3.0.4
+info:
+  title: Card Validator
+  description: Card Validator is a simple tool for validating if a card number is valid or not. It checks the card number format and the Luhn algorithm to see if the card number is valid.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/cardvalidator:
+    get:
+      summary: Validate Card Number
+      description: Card Validator is a simple tool for validating if a card number is valid or not. It checks the card number format and the Luhn algorithm to see if the card number is valid.
+      operationId: cardvalidator
+      parameters:
+      - name: number
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The card number to validate
+        example: '4900264223817524'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  card:
+                    niceType: Visa
+                    type: visa
+                    patterns:
+                    - 4
+                    gaps:
+                    - 4
+                    - 8
+                    - 12
+                    lengths:
+                    - 16
+                    - 18
+                    - 19
+                    code:
+                      name: CVV
+                      size: 3
+                    matchStrength: 1
+                  cardNumber: '4900264223817524'
+                  isValid: true
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
